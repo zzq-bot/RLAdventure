@@ -13,6 +13,7 @@ import os
 import numpy as np
 from pathlib import Path
 
+
 def save_results(rewards,ma_rewards,tag='train',path='./results'):
     '''save rewards and ma_rewards
     '''
@@ -20,9 +21,12 @@ def save_results(rewards,ma_rewards,tag='train',path='./results'):
     np.save(path+'{}_ma_rewards.npy'.format(tag), ma_rewards)
     print('results saved!')
 
+
 def make_dir(*paths):
     for path in paths:
         Path(path).mkdir(parents=True, exist_ok=True)
+
+
 def del_empty_dir(*paths):
     '''del_empty_dir delete empty folders unders "paths"
     '''

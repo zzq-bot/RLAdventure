@@ -38,6 +38,7 @@ class DQN:
 
         self.optimizer = optim.Adam(self.policy_net.parameters(), lr=cfg.lr)
         self.loss = nn.MSELoss()
+        print("use ", self.device)
 
     def process_state(self, state):
         return torch.from_numpy(state).type(torch.float32)
